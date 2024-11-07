@@ -38,4 +38,15 @@ public class EmployeeManager {
         }
         return null; // Return null if not found
     }
+
+    // Search for employees by Name
+    public List<Employee> searchEmployeeByName(String name) {
+        List<Employee> results = new ArrayList<>();
+        for (Employee employee : employees) {
+            if (employee.getName().equalsIgnoreCase(name)) {
+                results.add(employee);
+            }
+        }
+        return results; // Return the list of matching employees
+    }
 }
