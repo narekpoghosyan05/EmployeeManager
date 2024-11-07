@@ -28,4 +28,14 @@ public class EmployeeManager {
     public void deleteEmployee(int id){
         employees.removeIf(employee -> employee.getId() == id);
     }
+
+    // Search for an employee by ID
+    public Employee searchEmployeeById(int id) {
+        for (Employee employee : employees) {
+            if (employee.getId() == id) {
+                return employee;
+            }
+        }
+        return null; // Return null if not found
+    }
 }
